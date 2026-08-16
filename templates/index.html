@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>Plataforma de E-commerce</h1><p>CRUD completo com Flask, SQLite e SQLAlchemy.</p><h2>Anúncios</h2><a class="btn" href="{{url_for('anuncio_novo')}}">Novo anúncio</a><ul>{% for a in anuncios %}<li><a href="{{url_for('anuncio_detalhe',id=a.id)}}">{{a.titulo}}</a> — R$ {{'%.2f'|format(a.preco)}}</li>{% endfor %}</ul>{% endblock %}

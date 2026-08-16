@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>Relatório de compras</h1><table><tr><th>Data</th><th>Comprador</th><th>Anúncio</th><th>Valor</th></tr>{% for c in compras %}<tr><td>{{c.data.strftime('%d/%m/%Y')}}</td><td>{{c.comprador.nome}}</td><td>{{c.anuncio.titulo}}</td><td>R$ {{'%.2f'|format(c.valor)}}</td></tr>{% endfor %}</table>{% endblock %}

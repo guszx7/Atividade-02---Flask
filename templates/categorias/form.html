@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>{{'Editar' if categoria else 'Nova'}} categoria</h1><form method="post"><input name="nome" required value="{{categoria.nome if categoria else ''}}"><button>Salvar</button></form>{% endblock %}
